@@ -27,8 +27,8 @@ jobs:
         python-version: '3.11'
     - name: Install all necessary packages
       run: pip install jupyter pandas tika regex
-    - name: Install necessary packages other than pip
-      run: apt install ghostscript python3-tk
+#    - name: Install necessary packages other than pip
+#      run: apt install ghostscript python3-tk
     - name: Scraping today's data
       run: jupyter nbconvert --to notebook --execute "ScrapePDFintoCSV.ipynb" --stdout
     - name: Commit and push any changes
